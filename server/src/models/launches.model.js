@@ -3,17 +3,6 @@ const axios = require("axios");
 const launchesDatabase = require("./launches.mongo");
 const planets = require("./planet.mongo");
 const DEFAULT_FLIGHT_NUMBER = 100;
-const launch = {
-  flightNumber: 100,
-  mission: "fi",
-  rocket: "",
-  target: "Kepler-442 b",
-  launchDate: new Date("December 27 , 2030"),
-  customers: [],
-  upcomig: true,
-  success: true,
-};
-saveLaunch(launch);
 
 const SPACE_API_URL = "https://api.spacexdata.com/v5/launches/query";
 
