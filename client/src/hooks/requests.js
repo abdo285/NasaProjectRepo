@@ -1,15 +1,15 @@
 ///import { post } from "../../../server/src/app";
 
-const API_URI = "http://localhost:8080";
+const API_URI = "v1";
 
 async function httpGetPlanets() {
   // Load planets and return as JSON.
-  const response = await fetch(`${API_URI}/v1/planets`);
+  const response = await fetch(`${API_URI}/planets`);
   return await response.json();
 }
 
 async function httpGetLaunches() {
-  const response = await fetch(`${API_URI}/v1/launches`);
+  const response = await fetch(`${API_URI}/launches`);
   // Load launches, sort by flight number, and return as JSON.
   const fetchedLaunches = await response.json();
   return fetchedLaunches.sort((a, b) => {
